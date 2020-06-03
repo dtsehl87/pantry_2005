@@ -1,6 +1,6 @@
 class Recipe
 
-  attr_reader :name, :ingredients_required
+  attr_reader :name, :ingredients_required, :total_calories
 
   def initialize(name)
     @name = name

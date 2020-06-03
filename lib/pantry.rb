@@ -19,4 +19,12 @@ class Pantry
     end
   end
 
+  def enough_ingredients_for?(recipe)
+    return false if @stock.count < recipe.ingredients_required.count
+
+    @stock.all? do |ing, qty|
+      qty >= recipe.ingredients_required[ing]
+    end
+  end
+
 end
