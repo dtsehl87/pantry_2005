@@ -10,4 +10,12 @@ class CookBook
     @recipes << recipe
   end
 
+  def ingredients
+    @recipes.flat_map do |recipe|
+      recipe.ingredients.flat_map do |ingredient|
+        ingredient.name
+      end
+    end.uniq
+  end
+
 end
