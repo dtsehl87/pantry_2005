@@ -12,7 +12,7 @@ class Pantry
   end
 
   def restock(ingredient, quantity)
-    if @stock.empty?
+    if @stock[ingredient].nil?
       @stock[ingredient] = quantity
     else
       @stock[ingredient] += quantity
