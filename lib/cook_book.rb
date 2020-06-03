@@ -5,6 +5,7 @@ class CookBook
 
   def initialize
     @recipes = []
+    @date = Date.today
   end
 
   def add_recipe(recipe)
@@ -26,7 +27,7 @@ class CookBook
   end
 
   def date
-    Date.today.strftime("%m/%d/%y")
+    @date.strftime("%m/%d/%y")
   end
 
 end
